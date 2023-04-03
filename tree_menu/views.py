@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Menu
+from .models import TreeMenu
 
 
 def index(request):
-    return render(request, 'templatetags/menu.html', {'menu': Menu.objects.all()})
+    return render(request, 'templatetags/menu.html', {'menu': TreeMenu.objects.all()})

@@ -1,11 +1,14 @@
 from django.contrib import admin
-from mptt.admin import MPTTModelAdmin
-from .models import Menu
+from .models import TreeMenu
 
 
-class CategoryAdmin(MPTTModelAdmin):
-    fields = ['name', 'uri', 'parent']
+class MenuAdmin(admin.ModelAdmin):
+    fields = [
+        'name',
+        'uri',
+        'parent',
+    ]
     mptt_level_indent = 20
 
 
-admin.site.register(Menu, CategoryAdmin)
+admin.site.register(TreeMenu, MenuAdmin)
