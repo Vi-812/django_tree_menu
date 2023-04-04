@@ -7,8 +7,8 @@ class MenuAdmin(admin.ModelAdmin):
         'name',
         'uri',
         'parent',
+        'position',
     ]
-    mptt_level_indent = 20
 
 
 admin.site.register(TreeMenu, MenuAdmin)

@@ -47,3 +47,24 @@
 #         return {'menu': menu}
 #     else:
 #         raise template.TemplateSyntaxError()
+
+
+#
+#
+# {% extends 'base.html' %}
+# {% load mptt_tags %}
+#
+# {% block body %}
+# <ul>
+#     {% recursetree menu %}
+#     <li>
+#         {{ node.name }}
+#         {% if not node.is_leaf_node %}
+#         <ul class="children">
+#             {{ children }}
+#         </ul>
+#         {% endif %}
+#     </li>
+#     {% endrecursetree %}
+# </ul>
+# {% endblock %}
